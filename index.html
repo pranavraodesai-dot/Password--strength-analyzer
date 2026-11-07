@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <section class="card">
+      <div class="lock">🔐</div>
+      <h1>Password Strength Analyzer</h1>
+      <p class="subtitle">Check your password strength and get tips to make it safer.</p>
+
+      <label for="password">Enter your password</label>
+      <div class="password-wrap">
+        <input id="password" type="password" placeholder="Type a password" autocomplete="new-password">
+        <button id="toggle" type="button" aria-label="Show password">Show</button>
+      </div>
+
+      <div class="meter" aria-label="Password strength">
+        <span id="bar"></span>
+      </div>
+      <p id="strength" class="strength" aria-live="polite">Enter a password to begin</p>
+
+      <div class="checks">
+        <p id="length">○ At least 8 characters</p>
+        <p id="lower">○ Lowercase letter (a-z)</p>
+        <p id="upper">○ Uppercase letter (A-Z)</p>
+        <p id="number">○ Number (0-9)</p>
+        <p id="special">○ Special character (!@#$...)</p>
+        <p id="unique">○ Avoid common/repeated patterns</p>
+      </div>
+
+      <section class="tips">
+        <h2>Suggestions</h2>
+        <ul id="suggestions"><li>Use at least 12 characters for better security.</li></ul>
+      </section>
+      <button id="clear" class="clear" type="button">Clear password</button>
+      <p class="privacy">Your password is checked locally in this browser and is not sent to a server.</p>
+    </section>
+    <footer>Student Project · Password Security Awareness</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
